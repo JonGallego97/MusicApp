@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/instagram_story_background"
+    android:clickable="true"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageSong"
+        android:layout_width="278dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp"
+        android:contentDescription="ImageSong"
+        app:layout_constraintBottom_toTopOf="@+id/songDuration"
+        app:layout_constraintEnd_toStartOf="@+id/shareButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/artworks_000237469700_lm76po_t500x500"
+        tools:ignore="MissingConstraints"
+        tools:srcCompat="@drawable/artworks_000237469700_lm76po_t500x500" />
+
+    <TextView
+        android:id="@+id/songDuration"
+        android:layout_width="61dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="94dp"
+        android:text="3:01"
+        android:textColor="#FAF8F8"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+        app:layout_constraintStart_toEndOf="@+id/songDurationSlide"
+        app:layout_constraintTop_toBottomOf="@+id/imageSong"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/currentTime"
+        android:layout_width="59dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="167dp"
+        android:text="0:45"
+        android:textAlignment="textEnd"
+        android:textColor="#ECEAEA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow"
+        app:layout_constraintEnd_toStartOf="@+id/songDurationSlide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="51dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="1dp"
+        android:background="#19424040"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_share"
+        app:layout_constraintBottom_toTopOf="@+id/songDuration"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+        app:layout_constraintStart_toEndOf="@+id/imageSong"
+        app:layout_constraintTop_toBottomOf="@+id/lyricsButton"
+        tools:srcCompat="@drawable/ic_share" />
+
+    <SeekBar
+        android:id="@+id/songDurationSlide"
+        android:layout_width="249dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="2dp"
+        android:forceDarkAllowed="false"
+        android:progress="25"
+        android:thumbTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow"
+        app:layout_constraintEnd_toStartOf="@+id/songDuration"
+        app:layout_constraintStart_toEndOf="@+id/currentTime"
+        app:layout_constraintTop_toBottomOf="@+id/imageSong" />
+
+    <ImageButton
+        android:id="@+id/lyricsButton"
+        android:layout_width="51dp"
+
+        android:layout_height="46dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="71dp"
+        android:background="#19424040"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_lyrics"
+        app:layout_constraintBottom_toTopOf="@+id/shareButton"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+        app:layout_constraintStart_toEndOf="@+id/imageSong"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ic_lyrics" />
+
+    <LinearLayout
+        android:id="@+id/songInfoLayout"
+        android:layout_width="404dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow">
+
+        <ImageView
+            android:id="@+id/playlistButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_playlist_play"
+            tools:ignore="ContentDescription" />
+
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/songName"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_weight="1"
+                android:background="@drawable/song_info_background"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="3dp"
+                android:paddingVertical="1dp"
+                android:text="Without You"
+                android:textColor="#FAFAFA"
+                android:textSize="20sp"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:id="@+id/artistName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/song_info_background"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:text="Avicii"
+                android:textColor="#CDE8E4E4"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="403dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songInfoLayout"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/muteButton"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_weight="1"
+
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="center"
+            app:srcCompat="@drawable/ic_volume_off"
+            tools:srcCompat="@drawable/ic_volume_off" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/soundSlider"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#19424040"
+            android:stepSize="1"
+            android:value="7"
+            android:valueFrom="1"
+            android:valueTo="10"
+            app:thumbColor="@color/white"
+            app:tickColorInactive="#D3EDEDED"
+            app:trackColorActive="#FFFFFF"
+            app:trackColorInactive="#70FFFFFF"
+            tools:progress="10" />
+
+        <ImageView
+            android:id="@+id/maxVolumeButton"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_weight="1"
+
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="center"
+            app:srcCompat="@drawable/ic_volume_up"
+            tools:srcCompat="@drawable/ic_volume_up" />
+
+    </LinearLayout>
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="403dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/songInfoLayout"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songDuration">
+
+        <ImageButton
+            android:id="@+id/randomButton"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="7dp"
+            android:background="#19424040"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_random"
+            tools:srcCompat="@drawable/ic_random" />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+
+            android:layout_marginRight="7dp"
+            android:background="#19424040"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_skip_previous"
+            tools:srcCompat="@drawable/ic_skip_previous" />
+
+        <ImageButton
+            android:id="@+id/PlayPauseButton"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="7dp"
+            android:background="#19424040"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_pause"
+            tools:src="@drawable/ic_pause"
+            tools:srcCompat="@drawable/ic_pause" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="7dp"
+            android:background="#19424040"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_skip_next_sharp"
+            tools:srcCompat="@drawable/ic_skip_next_sharp" />
+
+        <ImageButton
+            android:id="@+id/repeatButton"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+
+            android:layout_marginRight="7dp"
+            android:background="#19424040"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:outlineAmbientShadowColor="#FDFDFD"
+            android:outlineSpotShadowColor="#41E6D7D7"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_repeat"
+            tools:src="@drawable/ic_repeat"
+            tools:srcCompat="@drawable/ic_repeat" />
+
+    </TableRow>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="426dp"
+        android:layout_height="405dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/lyrics_mask"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/songInfoLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/lyrics1"
+            android:layout_width="364dp"
+            android:layout_height="122dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:autoSizeTextType="none"
+            android:editable="false"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:focusableInTouchMode="false"
+            android:focusedByDefault="false"
+            android:fontFamily="serif-monospace"
+            android:inputType="textMultiLine"
+            android:text="You said that we would always be "
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/lyrics2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:autoSizeTextType="none"
+            android:editable="false"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:focusable="auto"
+            android:focusableInTouchMode="false"
+            android:fontFamily="serif-monospace"
+            android:inputType="textMultiLine"
+            android:text="Without you I feel lost at sea"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#C6EAEAEA"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/lyrics3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:autoSizeTextType="none"
+            android:editable="false"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:focusableInTouchMode="false"
+            android:fontFamily="serif-monospace"
+            android:inputType="textMultiLine"
+            android:text="Through the darkness you'd hide with me"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#5BF4F4F4"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/lyrics4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:autoSizeTextType="none"
+            android:editable="false"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:focusableInTouchMode="false"
+            android:fontFamily="serif-monospace"
+            android:inputType="textMultiLine"
+            android:text="Like the wind we'd be wild and free"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#05F4F4F4"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

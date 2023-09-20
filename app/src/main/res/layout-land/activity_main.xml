@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/instagram_story_background"
+    android:background="@drawable/ic_background"
     android:clickable="true"
     tools:context=".MainActivity">
 
@@ -15,7 +15,7 @@
         android:layout_marginStart="65dp"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="1dp"
-        android:contentDescription="ImageSong"
+        android:contentDescription="@string/imagesong"
         app:layout_constraintBottom_toTopOf="@+id/songDuration"
         app:layout_constraintEnd_toStartOf="@+id/shareButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
         android:layout_height="39dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="94dp"
-        android:text="3:01"
+        android:text="@string/_3_01"
         android:textColor="#FAF8F8"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/tableRow"
@@ -44,7 +44,7 @@
         android:layout_width="59dp"
         android:layout_height="39dp"
         android:layout_marginTop="167dp"
-        android:text="0:45"
+        android:text="@string/_0_45"
         android:textAlignment="textEnd"
         android:textColor="#ECEAEA"
         android:textSize="24sp"
@@ -68,7 +68,9 @@
         app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
         app:layout_constraintStart_toEndOf="@+id/imageSong"
         app:layout_constraintTop_toBottomOf="@+id/lyricsButton"
-        tools:srcCompat="@drawable/ic_share" />
+        tools:srcCompat="@drawable/ic_share"
+        android:contentDescription="@string/todo"
+        tools:ignore="ContentDescription" />
 
     <SeekBar
         android:id="@+id/songDurationSlide"
@@ -98,7 +100,8 @@
         app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
         app:layout_constraintStart_toEndOf="@+id/imageSong"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_lyrics" />
+        tools:srcCompat="@drawable/ic_lyrics"
+        android:contentDescription="TODO" />
 
     <LinearLayout
         android:id="@+id/songInfoLayout"
@@ -146,7 +149,7 @@
                 android:gravity="center_vertical"
                 android:paddingHorizontal="3dp"
                 android:paddingVertical="1dp"
-                android:text="Without You"
+                android:text="@string/without_you"
                 android:textColor="#FAFAFA"
                 android:textSize="20sp"
                 tools:ignore="NestedWeights" />
@@ -160,7 +163,7 @@
                 android:gravity="center_vertical"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="4dp"
-                android:text="Avicii"
+                android:text="@string/avicii"
                 android:textColor="#CDE8E4E4"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -286,8 +289,8 @@
             android:background="#19424040"
             android:foreground="?android:attr/selectableItemBackground"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_skip_next_sharp"
-            tools:srcCompat="@drawable/ic_skip_next_sharp" />
+            android:src="@drawable/ic_skip_next_song"
+            tools:srcCompat="@drawable/ic_skip_next_song" />
 
         <ImageButton
             android:id="@+id/repeatButton"
@@ -335,7 +338,7 @@
             android:focusedByDefault="false"
             android:fontFamily="serif-monospace"
             android:inputType="textMultiLine"
-            android:text="You said that we would always be "
+            android:text="@string/you_said_that_we_would_always_be"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textSize="24sp"
@@ -355,7 +358,7 @@
             android:focusableInTouchMode="false"
             android:fontFamily="serif-monospace"
             android:inputType="textMultiLine"
-            android:text="Without you I feel lost at sea"
+            android:text="@string/without_you_i_feel_lost_at_sea"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#C6EAEAEA"
@@ -375,12 +378,13 @@
             android:focusableInTouchMode="false"
             android:fontFamily="serif-monospace"
             android:inputType="textMultiLine"
-            android:text="Through the darkness you'd hide with me"
+            android:text="@string/through_the_darkness_you_d_hide_with_me"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#5BF4F4F4"
             android:textSize="24sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold|italic"
+            tools:ignore="LabelFor" />
 
         <EditText
             android:id="@+id/lyrics4"
@@ -395,7 +399,7 @@
             android:focusableInTouchMode="false"
             android:fontFamily="serif-monospace"
             android:inputType="textMultiLine"
-            android:text="Like the wind we'd be wild and free"
+            android:text="@string/like_the_wind_we_d_be_wild_and_free"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#05F4F4F4"
